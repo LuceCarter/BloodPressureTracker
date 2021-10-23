@@ -124,41 +124,42 @@
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />    
     
-    <ImageAsset Include="Assets.xcassets\history.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\history.imageset\history.png" />
-    <ImageAsset Include="Assets.xcassets\history.imageset\history%402x.png" />
-    <ImageAsset Include="Assets.xcassets\history.imageset\history%403x.png" />
-    <ImageAsset Include="Assets.xcassets\trends.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\trends.imageset\trends.png" />
-    <ImageAsset Include="Assets.xcassets\trends.imageset\trends%402x.png" />
-    <ImageAsset Include="Assets.xcassets\trends.imageset\trends%403x.png" />
-    <ImageAsset Include="Assets.xcassets\bloodpressure.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\bloodpressure.imageset\blood-pressure.png" />
-    <ImageAsset Include="Assets.xcassets\bloodpressure.imageset\blood-pressure%402x.png" />
-    <ImageAsset Include="Assets.xcassets\bloodpressure.imageset\blood-pressure%403x.png" />
-    <ImageAsset Include="Assets.xcassets\bloodpressuregauge.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\bloodpressuregauge.imageset\blood-pressure-gauge.png" />
-    <ImageAsset Include="Assets.xcassets\bloodpressuregauge.imageset\blood-pressure-gauge%402x.png" />
-    <ImageAsset Include="Assets.xcassets\bloodpressuregauge.imageset\blood-pressure-gauge%403x.png" />
-    <ImageAsset Include="Assets.xcassets\info.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\info.imageset\info.png" />
-    <ImageAsset Include="Assets.xcassets\info.imageset\info%402x.png" />
+    <ImageAsset Include="Assets.xcassets\bloodpressuregauge.imageset\bloodpressuregauge%403x.png" />
+    <ImageAsset Include="Assets.xcassets\bloodpressuregauge.imageset\bloodpressuregauge%402x.png" />
+    <ImageAsset Include="Assets.xcassets\bloodpressuregauge.imageset\bloodpressuregauge.png" />
+    <ImageAsset Include="Assets.xcassets\bloodpressuregauge.imageset\Contents.json">
+      <Visible>False</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\bloodpressure.imageset\bloodpressure%403x.png" />
+    <ImageAsset Include="Assets.xcassets\bloodpressure.imageset\bloodpressure%402x.png" />
+    <ImageAsset Include="Assets.xcassets\bloodpressure.imageset\bloodpressure.png" />
+    <ImageAsset Include="Assets.xcassets\bloodpressure.imageset\Contents.json">
+      <Visible>False</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\pulserate.imageset\pulserate%403x.png" />
+    <ImageAsset Include="Assets.xcassets\pulserate.imageset\pulserate%402x.png" />
+    <ImageAsset Include="Assets.xcassets\pulserate.imageset\pulserate.png" />
+    <ImageAsset Include="Assets.xcassets\pulserate.imageset\Contents.json">
+      <Visible>False</Visible>
+    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\info.imageset\info%403x.png" />
-    <ImageAsset Include="Assets.xcassets\bloodpressuregauge.imageset\blood-pressure-gauge-1.png" />
-    <ImageAsset Include="Assets.xcassets\bloodpressuregauge.imageset\blood-pressure-gauge%402x-1.png" />
-    <ImageAsset Include="Assets.xcassets\bloodpressuregauge.imageset\blood-pressure-gauge%403x-1.png" />
-    <ImageAsset Include="Assets.xcassets\bloodpressure.imageset\blood-pressure-1.png" />
-    <ImageAsset Include="Assets.xcassets\bloodpressure.imageset\blood-pressure%402x-1.png" />
-    <ImageAsset Include="Assets.xcassets\bloodpressure.imageset\blood-pressure%403x-1.png" />
-    <ImageAsset Include="Assets.xcassets\info.imageset\info-1.png" />
-    <ImageAsset Include="Assets.xcassets\info.imageset\info%402x-1.png" />
-    <ImageAsset Include="Assets.xcassets\info.imageset\info%403x-1.png" />
-    <ImageAsset Include="Assets.xcassets\trends.imageset\trends-1.png" />
-    <ImageAsset Include="Assets.xcassets\trends.imageset\trends%402x-1.png" />
-    <ImageAsset Include="Assets.xcassets\trends.imageset\trends%403x-1.png" />
-    <ImageAsset Include="Assets.xcassets\history.imageset\history-1.png" />
-    <ImageAsset Include="Assets.xcassets\history.imageset\history%402x-1.png" />
-    <ImageAsset Include="Assets.xcassets\history.imageset\history%403x-1.png" />
+    <ImageAsset Include="Assets.xcassets\info.imageset\info%402x.png" />
+    <ImageAsset Include="Assets.xcassets\info.imageset\info.png" />
+    <ImageAsset Include="Assets.xcassets\info.imageset\Contents.json">
+      <Visible>False</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\history.imageset\history%403x.png" />
+    <ImageAsset Include="Assets.xcassets\history.imageset\history%402x.png" />
+    <ImageAsset Include="Assets.xcassets\history.imageset\history.png" />
+    <ImageAsset Include="Assets.xcassets\history.imageset\Contents.json">
+      <Visible>False</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\trends.imageset\trends%403x.png" />
+    <ImageAsset Include="Assets.xcassets\trends.imageset\trends%402x.png" />
+    <ImageAsset Include="Assets.xcassets\trends.imageset\trends.png" />
+    <ImageAsset Include="Assets.xcassets\trends.imageset\Contents.json">
+      <Visible>False</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -182,10 +183,10 @@
   <ItemGroup>  
     <Folder Include="Renderers\" />
     <Folder Include="Assets.xcassets\pulse.imageset\" />
-    <Folder Include="Assets.xcassets\history.imageset\" />
     <Folder Include="Assets.xcassets\trends.imageset\" />
     <Folder Include="Assets.xcassets\bloodpressure.imageset\" />
     <Folder Include="Assets.xcassets\bloodpressuregauge.imageset\" />
     <Folder Include="Assets.xcassets\info.imageset\" />
+    <Folder Include="Assets.xcassets\.imageset\" />
   </ItemGroup>
 </Project>

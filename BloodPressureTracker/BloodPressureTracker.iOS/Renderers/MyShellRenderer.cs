@@ -1,6 +1,7 @@
 ﻿using System;
 using BloodPressureTracker;
 using BloodPressureTracker.iOS.Renderers;
+using CoreGraphics;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
@@ -51,11 +52,43 @@ namespace BloodPressureTracker.iOS.Renderers
             {
                 foreach (UITabBarItem tabbaritem in controller.TabBar.Items)
                 {
+                    tabbaritem.Image = ScalingImageToSize(tabbaritem.Image, new CGSize(30, 30));
                     tabbaritem.Image = tabbaritem.Image.ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
                     tabbaritem.SelectedImage = tabbaritem.SelectedImage.ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
+                   
                 }
             }
         }
+
+        public UIImage ScalingImageToSize(UIImage sourceImage, CGSize newSize)
+        {
+
+            if (UIScreen.MainScreen.Scale == 2.0) //@2x iPhone 6 7 8 
+            {
+                UIGraphics.BeginImageContextWithOptions(newSize, false, 2.0f);
+            }
+
+
+            else if (UIScreen.MainScreen.Scale == 3.0) //@3x iPhone 6p 7p 8p...
+            {
+                UIGraphics.BeginImageContextWithOptions(newSize, false, 3.0f);
+            }
+
+            else
+            {
+                UIGraphics.BeginImageContext(newSize);
+            }
+
+            sourceImage.Draw(new CGRect(0, 0, newSize.Width, newSize.Height));
+
+            UIImage newImage = UIGraphics.GetImageFromCurrentImageContext();
+
+            UIGraphics.EndImageContext();
+
+            return newImage;
+
+        }
+
     }
 }
 
