@@ -14,7 +14,7 @@
     <Shell.Resources>
         <ResourceDictionary>
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <!--<Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
                 <Setter Property="Shell.ForegroundColor" Value="White" />
                 <Setter Property="Shell.TitleColor" Value="White" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
@@ -22,7 +22,7 @@
                 <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
                 <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
                 <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
-                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>-->
             </Style>
             <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
             <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
@@ -30,8 +30,10 @@
     </Shell.Resources>
 
     <TabBar>
-        <ShellContent Title="Log" Icon="blood-pressure-gauge.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
-        <ShellContent Title="Trends" Icon="market-trends.png" ContentTemplate="{DataTemplate local:ItemsPage}" />
+        <ShellContent Title="Log" Icon="bloodpressuregauge.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
+        <ShellContent Title="Trends" Icon="trends.png" ContentTemplate="{DataTemplate local:ItemsPage}" />
+        <ShellContent Title="History" Icon="history.png" ContentTemplate="{DataTemplate local:ItemDetailPage}" />
+        <ShellContent Title="About" Icon="info.png" ContentTemplate="{DataTemplate local:AboutPage}" />
     </TabBar>
 
     <!--

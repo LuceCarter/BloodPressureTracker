@@ -16,7 +16,7 @@
     </ContentPage.Resources>
 
     <StackLayout>
-        <Image Source="blood-pressure.png" />
+        <Image Source="bloodpressure.png" />
 
     </StackLayout>
 
