@@ -7,17 +7,12 @@
     
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext>   
     
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Color x:Key="Accent">#96d1ff</Color>
-        </ResourceDictionary>
-    </ContentPage.Resources>
 
-    <StackLayout>
-        <Image Source="bloodpressure.png" />
-
+    <StackLayout>       
+            <Label Text="Made with love by Luce Carter" HorizontalOptions="Center"/>
+            <Label Text="Icons courtesy of FlatIcons" VerticalOptions="EndAndExpand" HorizontalOptions="Center" />       
     </StackLayout>
 
 </ContentPage>

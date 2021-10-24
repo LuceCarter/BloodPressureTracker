@@ -7,6 +7,7 @@
     -->
     <Application.Resources>
         <ResourceDictionary>
+            <Thickness x:Key="defaultThickness">15,15,15,15</Thickness>
             <Color x:Key="Primary">#2196F3</Color>
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
