@@ -30,7 +30,7 @@
     </Shell.Resources>
 
     <TabBar>
-        <ShellContent Title="Log" Icon="bloodpressuregauge.png" Route="LogReading" ContentTemplate="{DataTemplate local:LogReadingPage}" />
+        <ShellContent Title="Log" Icon="bloodpressure.png" Route="LogReading" ContentTemplate="{DataTemplate local:LogReadingPage}" />
         <ShellContent Title="Trends" Icon="trends.png" ContentTemplate="{DataTemplate local:TrendsPage}" />
         <ShellContent Title="History" Icon="history.png" ContentTemplate="{DataTemplate local:HistoryPage}" />
         <ShellContent Title="About" Icon="info.png" ContentTemplate="{DataTemplate local:AboutPage}" />

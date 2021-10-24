@@ -7,6 +7,6 @@ namespace BloodPressureTracker.ViewModels
         public LogReadingViewModel()
         {
             Title = "Log Blood Pressure Readings";
-        }
+        }        
     }
 }

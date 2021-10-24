@@ -9,4 +9,5 @@
     <ContentPage.BindingContext>
         <vm:TrendsViewModel />
     </ContentPage.BindingContext>
+   
 </ContentPage>

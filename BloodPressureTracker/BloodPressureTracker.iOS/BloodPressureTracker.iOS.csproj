@@ -160,6 +160,18 @@
     <ImageAsset Include="Assets.xcassets\trends.imageset\Contents.json">
       <Visible>False</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\calendar.imageset\calendar%403x.png" />
+    <ImageAsset Include="Assets.xcassets\calendar.imageset\calendar%402x.png" />
+    <ImageAsset Include="Assets.xcassets\calendar.imageset\calendar.png" />
+    <ImageAsset Include="Assets.xcassets\calendar.imageset\Contents.json">
+      <Visible>False</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\clock.imageset\clock%403x.png" />
+    <ImageAsset Include="Assets.xcassets\clock.imageset\clock%402x.png" />
+    <ImageAsset Include="Assets.xcassets\clock.imageset\clock.png" />
+    <ImageAsset Include="Assets.xcassets\clock.imageset\Contents.json">
+      <Visible>False</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
