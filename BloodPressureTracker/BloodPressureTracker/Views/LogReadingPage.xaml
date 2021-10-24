@@ -10,4 +10,25 @@
         <vm:LogReadingViewModel />
     </ContentPage.BindingContext>
 
+    <StackLayout Padding="15">
+        <Label Text="BP" />
+        <StackLayout Orientation="Horizontal">
+            <Entry Text="{Binding SystolicEntry}"
+                   Keyboard="Numeric"/>
+            <Label Text="/" />
+            <Entry Text="{Binding DiastolicEntry}"
+                   Keyboard="Numeric"/>
+        </StackLayout>
+       <StackLayout Orientation="Horizontal">
+            <Label Text="Pulse" />
+            <Entry Text="{Binding PulseEntry}"
+                   Keyboard="Numeric"/>
+        </StackLayout>
+
+        <Button Text="Log Reading"
+                VerticalOptions="EndAndExpand"
+                HorizontalOptions="Center"
+                Command="{Binding LogReadingCommand}" />
+    </StackLayout>
+
 </ContentPage>
