@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using BloodPressureTracker.Services;
+
 using BloodPressureTracker.Views;
 
 namespace BloodPressureTracker
@@ -12,8 +12,7 @@ namespace BloodPressureTracker
         public App()
         {
             InitializeComponent();
-
-            DependencyService.Register<MockDataStore>();
+            
             MainPage = new AppShell();
         }
 
