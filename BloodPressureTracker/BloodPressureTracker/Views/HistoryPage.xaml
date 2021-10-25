@@ -5,34 +5,41 @@
     xmlns:vm="clr-namespace:BloodPressureTracker.ViewModels"
     x:Class="BloodPressureTracker.Views.HistoryPage"
     Title="{Binding Title}">
-   
 
-        <StackLayout>   
+
+    <StackLayout BackgroundColor="Gray">   
              <CollectionView ItemsSource="{Binding BloodPressureReadings}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                   <StackLayout Padding="20">
-                        <StackLayout Orientation="Horizontal">
-                            <Image Source="calendar" HeightRequest="20" WidthRequest="20" />
-                            <Label Text="Date: " />
-                            <Label Text="{Binding Date.Date}" />
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal">
-                            <Image Source="clock" HeightRequest="20" WidthRequest="20" />
-                            <Label Text="Time Of Day: " />
-                            <Label Text="{Binding TimeOfDay}" />
-                        </StackLayout>
-                       <StackLayout Orientation="Horizontal">
-                           <Image Source="bloodpressuregauge" HeightRequest="20" WidthRequest="20" />
-                            <Label Text="Blood Pressure: " />
-                            <Label Text="{Binding BloodPressure}" />
-                        </StackLayout>
-                       <StackLayout Orientation="Horizontal">
-                           <Image Source="pulserate" HeightRequest="20" WidthRequest="20"/>
-                            <Label Text="Pulse: " />
-                            <Label Text="{Binding Pulse}" />
-                        </StackLayout>
-                    </StackLayout>             
+                    <StackLayout>
+                        <Frame CornerRadius="10"
+                               Margin="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="calendar" HeightRequest="20" WidthRequest="20" />
+                                    <Label Text="Date: " />
+                                    <Label Text="{Binding Date.Date}" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="clock" HeightRequest="20" WidthRequest="20" />
+                                    <Label Text="Time Of Day: " />
+                                    <Label Text="{Binding TimeOfDay}" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="bloodpressuregauge" HeightRequest="20" WidthRequest="20" />
+                                    <Label Text="Blood Pressure: " />
+                                    <Label Text="{Binding BloodPressure}" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="pulserate" HeightRequest="20" WidthRequest="20"/>
+                                    <Label Text="Pulse: " />
+                                    <Label Text="{Binding Pulse}" />
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                        
+                    </StackLayout>
+                   
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
