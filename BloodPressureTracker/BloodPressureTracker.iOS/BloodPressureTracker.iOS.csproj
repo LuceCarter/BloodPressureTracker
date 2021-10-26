@@ -80,53 +80,100 @@
     <BundleResource Include="Resources\xamarin_logo.png" />
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
-    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />    
-    
-    <ImageAsset Include="Assets.xcassets\bloodpressuregauge.imageset\bloodpressuregauge%403x.png" />
-    <ImageAsset Include="Assets.xcassets\bloodpressuregauge.imageset\bloodpressuregauge%402x.png" />
-    <ImageAsset Include="Assets.xcassets\bloodpressuregauge.imageset\bloodpressuregauge.png" />
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\bloodpressuregauge.imageset\bloodpressuregauge%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\bloodpressuregauge.imageset\bloodpressuregauge%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\bloodpressuregauge.imageset\bloodpressuregauge.png">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\bloodpressuregauge.imageset\Contents.json">
       <Visible>False</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\bloodpressure.imageset\bloodpressure%403x.png" />
-    <ImageAsset Include="Assets.xcassets\bloodpressure.imageset\bloodpressure%402x.png" />
-    <ImageAsset Include="Assets.xcassets\bloodpressure.imageset\bloodpressure.png" />
+    <ImageAsset Include="Assets.xcassets\bloodpressure.imageset\bloodpressure%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\bloodpressure.imageset\bloodpressure%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\bloodpressure.imageset\bloodpressure.png">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\bloodpressure.imageset\Contents.json">
       <Visible>False</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\pulserate.imageset\pulserate%403x.png" />
-    <ImageAsset Include="Assets.xcassets\pulserate.imageset\pulserate%402x.png" />
-    <ImageAsset Include="Assets.xcassets\pulserate.imageset\pulserate.png" />
+    <ImageAsset Include="Assets.xcassets\pulserate.imageset\pulserate%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\pulserate.imageset\pulserate%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\pulserate.imageset\pulserate.png">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\pulserate.imageset\Contents.json">
       <Visible>False</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\info.imageset\info%403x.png" />
-    <ImageAsset Include="Assets.xcassets\info.imageset\info%402x.png" />
-    <ImageAsset Include="Assets.xcassets\info.imageset\info.png" />
+    <ImageAsset Include="Assets.xcassets\info.imageset\info%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\info.imageset\info%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\info.imageset\info.png">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\info.imageset\Contents.json">
       <Visible>False</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\history.imageset\history%403x.png" />
-    <ImageAsset Include="Assets.xcassets\history.imageset\history%402x.png" />
-    <ImageAsset Include="Assets.xcassets\history.imageset\history.png" />
+    <ImageAsset Include="Assets.xcassets\history.imageset\history%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\history.imageset\history%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\history.imageset\history.png">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\history.imageset\Contents.json">
       <Visible>False</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\trends.imageset\trends%403x.png" />
-    <ImageAsset Include="Assets.xcassets\trends.imageset\trends%402x.png" />
-    <ImageAsset Include="Assets.xcassets\trends.imageset\trends.png" />
+    <ImageAsset Include="Assets.xcassets\trends.imageset\trends%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\trends.imageset\trends%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\trends.imageset\trends.png">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\trends.imageset\Contents.json">
       <Visible>False</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\calendar.imageset\calendar%403x.png" />
-    <ImageAsset Include="Assets.xcassets\calendar.imageset\calendar%402x.png" />
-    <ImageAsset Include="Assets.xcassets\calendar.imageset\calendar.png" />
+    <ImageAsset Include="Assets.xcassets\calendar.imageset\calendar%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\calendar.imageset\calendar%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\calendar.imageset\calendar.png">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\calendar.imageset\Contents.json">
       <Visible>False</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\clock.imageset\clock%403x.png" />
-    <ImageAsset Include="Assets.xcassets\clock.imageset\clock%402x.png" />
-    <ImageAsset Include="Assets.xcassets\clock.imageset\clock.png" />
+    <ImageAsset Include="Assets.xcassets\clock.imageset\clock%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\clock.imageset\clock%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\clock.imageset\clock.png">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\clock.imageset\Contents.json">
       <Visible>False</Visible>
     </ImageAsset>
@@ -218,7 +265,7 @@
       <Name>BloodPressureTracker</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>  
+  <ItemGroup>
     <Folder Include="Renderers\" />
     <Folder Include="Assets.xcassets\pulse.imageset\" />
     <Folder Include="Assets.xcassets\trends.imageset\" />

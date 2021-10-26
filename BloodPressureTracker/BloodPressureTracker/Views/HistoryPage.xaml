@@ -5,34 +5,60 @@
     xmlns:vm="clr-namespace:BloodPressureTracker.ViewModels"
     x:Class="BloodPressureTracker.Views.HistoryPage"
     Title="{Binding Title}">
-   
 
-        <StackLayout>   
+
+    <StackLayout BackgroundColor="Gray">   
              <CollectionView ItemsSource="{Binding BloodPressureReadings}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                   <StackLayout Padding="20">
-                        <StackLayout Orientation="Horizontal">
-                            <Image Source="calendar" HeightRequest="20" WidthRequest="20" />
-                            <Label Text="Date: " />
-                            <Label Text="{Binding Date.Date}" />
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal">
-                            <Image Source="clock" HeightRequest="20" WidthRequest="20" />
-                            <Label Text="Time Of Day: " />
-                            <Label Text="{Binding TimeOfDay}" />
-                        </StackLayout>
-                       <StackLayout Orientation="Horizontal">
-                           <Image Source="bloodpressuregauge" HeightRequest="20" WidthRequest="20" />
-                            <Label Text="Blood Pressure: " />
-                            <Label Text="{Binding BloodPressure}" />
-                        </StackLayout>
-                       <StackLayout Orientation="Horizontal">
-                           <Image Source="pulserate" HeightRequest="20" WidthRequest="20"/>
-                            <Label Text="Pulse: " />
-                            <Label Text="{Binding Pulse}" />
-                        </StackLayout>
-                    </StackLayout>             
+                    <StackLayout>
+                        <Frame CornerRadius="10"
+                               Margin="5">
+                            <StackLayout Margin="10">
+                                <Label Text="{Binding Date.Date}" HorizontalOptions="Center" FontAttributes="Bold"/>
+                                <Grid RowDefinitions="Auto, *, *"
+                                      ColumnDefinitions="Auto, *, *, *">
+                                    <Label Text="Blood Pressure"
+                                           Grid.Row="0"
+                                           Grid.Column="0" 
+                                           Grid.ColumnSpan="2"/>
+                                    <Image Source="bloodpressure.png" 
+                                            HorizontalOptions="Center"
+                                           VerticalOptions="Center"
+                                           HeightRequest="20"
+                                           WidthRequest="20"
+                                           Grid.Row="1"
+                                           Grid.RowSpan="2"
+                                           Grid.Column="0" />
+                                    <Label Text="{Binding Systolic}"
+                                           Grid.Column="1"
+                                           Grid.Row="1" />
+                                    <Label Text="{Binding Diastolic}"
+                                           Grid.Column="1"
+                                           Grid.Row="2" />
+
+                                    <Label Text="Pulse"
+                                           Grid.Column="3"
+                                           Grid.ColumnSpan="2"
+                                           Grid.Row="0" />
+                                    <Image Source="pulserate.png"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"
+                                           HeightRequest="20"
+                                           WidthRequest="20"
+                                           Grid.Row="1"
+                                           
+                                           Grid.Column="2" />
+                                    <Label Text="{Binding Pulse}"
+                                           Grid.Column="3"
+                                           Grid.Row="1"
+                                           Grid.RowSpan="2" />
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+                        
+                    </StackLayout>
+                   
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
