@@ -3,7 +3,7 @@ name: Mobile
 on:
   push:
     branches:
-      - "githubactions"
+      - "main"
   pull_request:
     branches: 
       - "*"

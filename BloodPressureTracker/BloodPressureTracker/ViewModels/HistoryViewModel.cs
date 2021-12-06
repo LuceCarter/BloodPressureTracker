@@ -39,8 +39,8 @@ namespace BloodPressureTracker.ViewModels
             user = await app.LogInAsync(Credentials.Anonymous());
             config = new SyncConfiguration("myPartition", user);
             
-            realm = await Realm.GetInstanceAsync(config);
-            
+            realm = await Realm.GetInstanceAsync(config);            
+
             BloodPressureReadings = new ObservableCollection<BloodPressureReading>(realm.All<BloodPressureReading>().ToList());
             
         }        
