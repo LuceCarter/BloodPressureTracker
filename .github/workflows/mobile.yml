@@ -1,0 +1,34 @@
+name: Mobile
+
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches: 
+      - "*"
+
+jobs:
+  Build:
+     - uses: actions/checkout@v1
+
+      - name: Install Boots
+        run : |
+          dotnet tool install --global boots
+          boots --stable Mono
+          boots --preview Xamarin.Android
+          boots --preview Xamarin.iOS
+          boots --preview Xamarin.Mac
+      - name: Restore NuGet 
+        run: |
+          nuget restore
+          
+      - name: Build Android App
+        run: |                    
+          mono /Applications/Visual\ studio.app/Contents/Resources/lib/monodevelop/bin/MSBuild/Current/bin/MSBuild.dll ./BloodPressureTracker.Android/BloodPressureTracker.Android.csproj /verbosity:normal /p:Configuration=Debug
+
+      - name: Build iOS App
+        run: /
+          msbuild ./BloodPressureTracker.iOS/BloodPressureTracker.iOS.csproj /verbosity:normal /t:Rebuild /p:Platform=iPhoneSimulator /p:Configuration=Debug
+  
+ 
