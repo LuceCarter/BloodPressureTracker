@@ -9,29 +9,30 @@ on:
       - "*"
 
 jobs:
-  Build_Android_iOS:
-     runs-on: macos-latest
+    Build_Android:
+      runs-on: macos-latest
 
       steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
-        - name: Install Boots
-          run : |
-            dotnet tool install --global boots
-            boots --stable Mono
-            boots --preview Xamarin.Android
-            boots --preview Xamarin.iOS
-            boots --preview Xamarin.Mac
-        - name: Restore NuGet 
-          run: |
-            nuget restore
-            
-        - name: Build Android App
-          run: |                    
-            mono /Applications/Visual\ studio.app/Contents/Resources/lib/monodevelop/bin/MSBuild/Current/bin/MSBuild.dll ./BloodPressureTracker.Android/BloodPressureTracker.Android.csproj /verbosity:normal /p:Configuration=Debug
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin' # See 'Supported distributions' for available options
+          java-version: '17'
+              
+      
+      - name: Install Boots 
+        run: |
+          dotnet tool install --global boots
+          boots https://aka.ms/xamarin-android-commercial-d16-9-macos
+          boots https://download.mono-project.com/archive/6.12.0/macos-10-universal/MonoFramework-MDK-6.12.0.122.macos10.xamarin.universal.pkg
 
-        - name: Build iOS App
-          run: /
-            msbuild ./BloodPressureTracker.iOS/BloodPressureTracker.iOS.csproj /verbosity:normal /t:Rebuild /p:Platform=iPhoneSimulator /p:Configuration=Debug
+      - name: Restore NuGet 
+        run: |
+          nuget restore
+          
+      - name: Build Android App
+        run: |                    
+          mono /Applications/Visual\ studio.app/Contents/Resources/lib/monodevelop/bin/MSBuild/Current/bin/MSBuild.dll ./BloodPressureTracker.Android/BloodPressureTracker.Android.csproj /verbosity:normal /p:Configuration=Release     
+          
     
- 
