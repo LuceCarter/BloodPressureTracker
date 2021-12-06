@@ -9,7 +9,7 @@ on:
       - "*"
 
 jobs:
-    Build_Android:
+    Build_Mobile:
       runs-on: macos-latest
 
       steps:
@@ -29,4 +29,6 @@ jobs:
         run: |                    
           mono /Applications/Visual\ studio.app/Contents/Resources/lib/monodevelop/bin/MSBuild/Current/bin/MSBuild.dll ./BloodPressureTracker/BloodPressureTracker.Android/BloodPressureTracker.Android.csproj /verbosity:normal /p:Configuration=Debug     
           
-    
+      - name: Build iOS App
+        run: |                    
+          mono /Applications/Visual\ studio.app/Contents/Resources/lib/monodevelop/bin/MSBuild/Current/bin/MSBuild.dll ./BloodPressureTracker/BloodPressureTracker.iOS/BloodPressureTracker.iOS.csproj /verbosity:normal /p:Configuration=Debug /p:Platform=iPhoneSimulator
