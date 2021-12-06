@@ -41,7 +41,7 @@ namespace BloodPressureTracker.ViewModels
             
             realm = await Realm.GetInstanceAsync(config);            
 
-            BloodPressureReadings = new ObservableCollection<BloodPressureReading>(realm.All<BloodPressureReading>().ToList());
+            BloodPressureReadings = new ObservableCollection<BloodPressureReading>(realm.All<BloodPressureReading>().ToList().Reverse<BloodPressureReading>());
             
         }        
     }
