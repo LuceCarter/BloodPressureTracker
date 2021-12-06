@@ -33,6 +33,6 @@ jobs:
           
       - name: Build Android App
         run: |                    
-          mono /Applications/Visual\ studio.app/Contents/Resources/lib/monodevelop/bin/MSBuild/Current/bin/MSBuild.dll ./BloodPressureTracker.Android/BloodPressureTracker.Android.csproj /verbosity:normal /p:Configuration=Debug     
+          mono /Applications/Visual\ studio.app/Contents/Resources/lib/monodevelop/bin/MSBuild/Current/bin/MSBuild.dll ./BloodPressureTracker/BloodPressureTracker.Android/BloodPressureTracker.Android.csproj /verbosity:normal /p:Configuration=Debug     
           
     
