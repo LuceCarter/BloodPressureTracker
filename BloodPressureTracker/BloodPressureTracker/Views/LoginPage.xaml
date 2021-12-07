@@ -2,8 +2,19 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:BloodPressureTracker.ViewModels"
+    Title="{Binding Title}"
+    Shell.PresentationMode="ModalAnimated"
     x:Class="BloodPressureTracker.Views.LoginPage">
-    <ContentPage.Content>
-        
-    </ContentPage.Content>
+
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="{StaticResource defaultSpacing}">
+        <Entry Placeholder="Email" Text="{Binding EmailEntry}" IsTextPredictionEnabled="False" Keyboard="Plain" />
+        <Entry Placeholder="Password" IsPassword="True" Text="{Binding PasswordEntry}" IsTextPredictionEnabled="False" Keyboard="Plain" />
+        <Button Text="Log In" Command="{Binding LoginCommand}"/>
+        <Button Text="Create New Account" Command="{Binding CreateAccountCommand}" BackgroundColor="{StaticResource PrimaryColorOrange}" TextColor="{StaticResource SecondaryColorBlue}"/>
+    </StackLayout>
 </ContentPage>

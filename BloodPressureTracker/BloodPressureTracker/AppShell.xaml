@@ -27,13 +27,17 @@
             <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
             <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
         </ResourceDictionary>
-    </Shell.Resources>
+    </Shell.Resources>    
 
-    <TabBar>
+    <TabBar Route="Main">
         <ShellContent Title="Log" Icon="bloodpressure.png" Route="LogReading" ContentTemplate="{DataTemplate local:LogReadingPage}" />
-        <ShellContent Title="Trends" Icon="trends.png" ContentTemplate="{DataTemplate local:TrendsPage}" />
+        <ShellContent Title="Trends" Icon="trends.png" ContentTemplate="{DataTemplate local:LoginPage}" />
         <ShellContent Title="History" Icon="history.png" ContentTemplate="{DataTemplate local:HistoryPage}" />
         <ShellContent Title="About" Icon="info.png" ContentTemplate="{DataTemplate local:AboutPage}" />
     </TabBar>
+
+    <ShellContent Route="Login"
+                  ContentTemplate="{DataTemplate local:LoginPage}">
+    </ShellContent>
 </Shell>
 

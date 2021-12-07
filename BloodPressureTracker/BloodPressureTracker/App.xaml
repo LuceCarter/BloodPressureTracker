@@ -6,29 +6,18 @@
         Define global resources and styles here, that apply to all pages in your app.
     -->
     <Application.Resources>
-        <ResourceDictionary>
-            <Thickness x:Key="defaultThickness">15,15,15,15</Thickness>
-            <Color x:Key="Primary">#2196F3</Color>
-            <Style TargetType="Button">
-                <Setter Property="TextColor" Value="White"></Setter>
-                <Setter Property="VisualStateManager.VisualStateGroups">
-                    <VisualStateGroupList>
-                        <VisualStateGroup x:Name="CommonStates">
-                            <VisualState x:Name="Normal">
-                                <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
-                                </VisualState.Setters>
-                            </VisualState>
-                            <VisualState x:Name="Disabled">
-                                <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="#332196F3" />
-                                </VisualState.Setters>
-                            </VisualState>
-                        </VisualStateGroup>
-                    </VisualStateGroupList>
-                </Setter>
-            </Style>
-        </ResourceDictionary>        
+        <Thickness x:Key="defaultSpacing">5,5,5,5</Thickness>
+        <Color x:Key="OffWhiteBackgroundPrimary">#F4F4F8</Color>
+        <Thickness x:Key="ButtonStackLayoutThickness">50,0,50,0</Thickness>
+        <Color x:Key="SecondaryColorBlue">#0F2745</Color>
+        <Color x:Key="PrimaryColorOrange">#FFFFA03A</Color>
+
+        <Style TargetType="Button">            
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="BackgroundColor" Value="{StaticResource SecondaryColorBlue}"/>
+            <Setter Property="TextColor" Value="{StaticResource PrimaryColorOrange}" />                   
+        </Style>      
+  
     </Application.Resources>
 </Application>
 

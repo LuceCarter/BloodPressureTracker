@@ -13,7 +13,7 @@
                 <DataTemplate>
                     <StackLayout>
                         <Frame CornerRadius="10"
-                               Margin="5">
+                               Margin="{StaticResource defaultSpacing}">
                             <StackLayout Margin="10">
                                 <Label Text="{Binding Date.Date}" HorizontalOptions="Center" FontAttributes="Bold"/>
                                 <Grid RowDefinitions="Auto, *, *"

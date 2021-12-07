@@ -22,7 +22,7 @@ namespace BloodPressureTracker.ViewModels
         {
             Title = "Log Blood Pressure Readings";
             LogReadingCommand = new AsyncCommand(() => LogReading());
-        }
+        }        
 
         private string systolicEntry = "";
         public string SystolicEntry

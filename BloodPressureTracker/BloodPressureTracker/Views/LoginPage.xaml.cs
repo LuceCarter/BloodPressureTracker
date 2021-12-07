@@ -1,15 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace BloodPressureTracker.Views
 {
     public partial class LoginPage : ContentPage
-    {
+    {        
         public LoginPage()
         {
-            InitializeComponent();
+            InitializeComponent();            
+        }
+
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
         }
     }
 }

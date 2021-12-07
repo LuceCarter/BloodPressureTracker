@@ -10,6 +10,6 @@ namespace BloodPressureTracker.Views
         public LogReadingPage()
         {
             InitializeComponent();
-        }
+        }       
     }
 }
