@@ -16,7 +16,7 @@ namespace BloodPressureTracker.ViewModels
     public class HistoryViewModel : BaseViewModel
     {
         private Realms.Sync.App app;
-        private Realms.Sync.User user;        
+        private User user;        
         private Realm realm;
         private SyncConfiguration config;
         private ObservableCollection<BloodPressureReading> bloodPressureReadings;      
@@ -39,10 +39,12 @@ namespace BloodPressureTracker.ViewModels
             app = Realms.Sync.App.Create(AppSecrets.RealmAppId);            
             config = new SyncConfiguration($"user={ app.CurrentUser.Id }", app.CurrentUser);            
             realm = await Realm.GetInstanceAsync(config);
-            //user = realm.Find<User>(app.CurrentUser.Id);
+            user = realm.Find<User>(app.CurrentUser.Id);
 
-            BloodPressureReadings = new ObservableCollection<BloodPressureReading>(realm.All<BloodPressureReading>().ToList().Reverse<BloodPressureReading>());
-            
+            if(user != null)
+            {
+                BloodPressureReadings = new ObservableCollection<BloodPressureReading>(realm.All<BloodPressureReading>().ToList().Reverse<BloodPressureReading>());
+            } 
         }        
     }
 }

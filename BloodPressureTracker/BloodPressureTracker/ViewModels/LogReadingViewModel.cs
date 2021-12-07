@@ -7,6 +7,7 @@ using MvvmHelpers;
 using MvvmHelpers.Commands;
 using Realms;
 using Realms.Sync;
+using User = BloodPressureTracker.Models.User;
 
 namespace BloodPressureTracker.ViewModels
 {
@@ -72,14 +73,14 @@ namespace BloodPressureTracker.ViewModels
                     Systolic = systolic,
                     Diastolic = diastolic,
                     Pulse = pulse,
-                    PartitionKey = "myPartition"
+                    PartitionKey = app.CurrentUser.Id
                 };
 
                 app = Realms.Sync.App.Create(AppSecrets.RealmAppId);
-                user = await app.LogInAsync(Credentials.Anonymous());
-                config = new SyncConfiguration("myPartition", user);
+                config = new SyncConfiguration($"user={ app.CurrentUser.Id }", app.CurrentUser);
+                realm = await Realm.GetInstanceAsync(config);              
 
-                realm = await Realm.GetInstanceAsync(config);
+             
 
                 realm.Write(() =>
                 {
