@@ -66,6 +66,10 @@ namespace BloodPressureTracker.ViewModels
                     timeOfDay = "PM";
                 }
 
+                app = Realms.Sync.App.Create(AppSecrets.RealmAppId);
+                config = new SyncConfiguration($"user={ app.CurrentUser.Id }", app.CurrentUser);
+                realm = await Realm.GetInstanceAsync(config);
+
                 var reading = new BloodPressureReading
                 {
                     Date = DateTimeOffset.Parse(currentTime),
@@ -76,10 +80,8 @@ namespace BloodPressureTracker.ViewModels
                     PartitionKey = app.CurrentUser.Id
                 };
 
-                app = Realms.Sync.App.Create(AppSecrets.RealmAppId);
-                config = new SyncConfiguration($"user={ app.CurrentUser.Id }", app.CurrentUser);
-                realm = await Realm.GetInstanceAsync(config);              
-
+                      
+                
              
 
                 realm.Write(() =>

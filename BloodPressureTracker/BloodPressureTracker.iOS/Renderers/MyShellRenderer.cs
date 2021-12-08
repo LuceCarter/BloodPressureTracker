@@ -47,15 +47,14 @@ namespace BloodPressureTracker.iOS.Renderers
         }
 
         private void DisplayColorIcons(UITabBarController controller)
-        {
+        {            
             if (controller.TabBar.Items != null)
             {
                 foreach (UITabBarItem tabbaritem in controller.TabBar.Items)
                 {
                     tabbaritem.Image = ScalingImageToSize(tabbaritem.Image, new CGSize(30, 30));
                     tabbaritem.Image = tabbaritem.Image.ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
-                    tabbaritem.SelectedImage = tabbaritem.SelectedImage.ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
-                   
+                    tabbaritem.SelectedImage = tabbaritem.SelectedImage.ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);                   
                 }
             }
         }

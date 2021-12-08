@@ -259,6 +259,12 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
       <Visible>False</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\login.imageset\login%403x.png" />
+    <ImageAsset Include="Assets.xcassets\login.imageset\login%402x.png" />
+    <ImageAsset Include="Assets.xcassets\login.imageset\login.png" />
+    <ImageAsset Include="Assets.xcassets\login.imageset\Contents.json">
+      <Visible>False</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -58,8 +58,7 @@ namespace BloodPressureTracker.ViewModels
                 {
                     await AppShell.Current.GoToAsync("///Main");
                     EmailEntry = "";
-                    PasswordEntry = "";
-                    await App.Current.MainPage.DisplayAlert("Hooray!", "Logged in!", "OK");
+                    PasswordEntry = "";                    
                 }
                 else
                 {
