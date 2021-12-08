@@ -69,6 +69,7 @@ namespace BloodPressureTracker.ViewModels
                 app = Realms.Sync.App.Create(AppSecrets.RealmAppId);
                 config = new SyncConfiguration($"user={ app.CurrentUser.Id }", app.CurrentUser);
                 realm = await Realm.GetInstanceAsync(config);
+                user = realm.Find<User>(app.CurrentUser.Id);
 
                 var reading = new BloodPressureReading
                 {
@@ -77,7 +78,7 @@ namespace BloodPressureTracker.ViewModels
                     Systolic = systolic,
                     Diastolic = diastolic,
                     Pulse = pulse,
-                    PartitionKey = app.CurrentUser.Id
+                    PartitionKey = user.Id
                 };
 
                       

@@ -15,17 +15,16 @@ namespace BloodPressureTracker
             viewModel = new LoginViewModel();
         }
 
-        protected override void OnAppearing()
+        protected override void OnNavigated(ShellNavigatedEventArgs args)
         {
-            base.OnAppearing();
+            base.OnNavigated(args);
+
             var isLoggedIn = viewModel.CheckIsLoggedIn();
 
-            if(isLoggedIn)
+            if (isLoggedIn)
             {
-                Shell.Current.GoToAsync("///Main");
-            }
-
-            Shell.Current.GoToAsync("///Login");
+                AppShell.Current.GoToAsync("Main");
+            }           
         }
     }
 }

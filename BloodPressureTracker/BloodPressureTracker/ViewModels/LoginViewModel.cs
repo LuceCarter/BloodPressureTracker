@@ -4,15 +4,13 @@ using System.Windows.Input;
 using BloodPressureTracker.Helpers;
 using MvvmHelpers;
 using MvvmHelpers.Commands;
+using Realms;
 using Realms.Sync;
 
 namespace BloodPressureTracker.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
-        private Realms.Sync.App app;
-        private User user;
-
         public ICommand LoginCommand { get; set; }
         public ICommand CreateAccountCommand { get; set; }
 
@@ -20,7 +18,7 @@ namespace BloodPressureTracker.ViewModels
         {
             Title = "Login";
             LoginCommand = new AsyncCommand(Login);
-            CreateAccountCommand = new AsyncCommand(CreateAccount);
+            CreateAccountCommand = new AsyncCommand(CreateAccount);            
         }
 
         private string emailEntry = "";
@@ -38,7 +36,9 @@ namespace BloodPressureTracker.ViewModels
         }
 
         public bool CheckIsLoggedIn()
-        {            
+        {
+           var user = App.RealmApp.CurrentUser;
+
             if (user.State == UserState.LoggedIn)
                 return true;
             else
@@ -50,9 +50,8 @@ namespace BloodPressureTracker.ViewModels
         private async Task Login()
         {
             try
-            {
-                app = Realms.Sync.App.Create(AppSecrets.RealmAppId);
-                user = await app.LogInAsync(Credentials.EmailPassword(EmailEntry, PasswordEntry));
+            {                
+                var user = await App.RealmApp.LogInAsync(Credentials.EmailPassword(EmailEntry, PasswordEntry));
 
                 if(user != null)
                 {
@@ -74,8 +73,9 @@ namespace BloodPressureTracker.ViewModels
         {
             try
             {
-                app = Realms.Sync.App.Create(AppSecrets.RealmAppId);
-                await app.EmailPasswordAuth.RegisterUserAsync(EmailEntry, PasswordEntry);
+                
+                await App.RealmApp.EmailPasswordAuth.RegisterUserAsync(EmailEntry, PasswordEntry);
+
                 await Login();
 
             } catch (Exception ex)

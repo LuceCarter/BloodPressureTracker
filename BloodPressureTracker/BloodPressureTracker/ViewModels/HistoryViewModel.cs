@@ -14,8 +14,7 @@ using User = BloodPressureTracker.Models.User;
 namespace BloodPressureTracker.ViewModels
 {
     public class HistoryViewModel : BaseViewModel
-    {
-        private Realms.Sync.App app;
+    {        
         private User user;        
         private Realm realm;
         private SyncConfiguration config;
@@ -23,7 +22,8 @@ namespace BloodPressureTracker.ViewModels
 
         public HistoryViewModel()
         {
-            Title = "History";           
+            Title = "History";
+            bloodPressureReadings = new ObservableCollection<BloodPressureReading>();
         }
 
         public ObservableCollection<BloodPressureReading> BloodPressureReadings
@@ -36,14 +36,18 @@ namespace BloodPressureTracker.ViewModels
         // in code-behind as this always uses a single thread.
         public async Task InitialiseRealm()
         {
-            app = Realms.Sync.App.Create(AppSecrets.RealmAppId);            
-            config = new SyncConfiguration($"user={ app.CurrentUser.Id }", app.CurrentUser);            
+                       
+            config = new SyncConfiguration($"user={ App.RealmApp.CurrentUser.Id }", App.RealmApp.CurrentUser);            
             realm = await Realm.GetInstanceAsync(config);
-            user = realm.Find<User>(app.CurrentUser.Id);
+            user = realm.Find<User>(App.RealmApp.CurrentUser.Id);
 
             if(user != null)
             {
-                BloodPressureReadings = new ObservableCollection<BloodPressureReading>(realm.All<BloodPressureReading>().ToList().Reverse<BloodPressureReading>());
+                foreach(BloodPressureReading reading in user.Readings)
+                {
+                    BloodPressureReadings.Add(reading);
+                }
+                //BloodPressureReadings = new ObservableCollection<BloodPressureReading>(realm.All<BloodPressureReading>().Where(reading => reading.Id.ToString() == user.Id).ToList().Reverse<BloodPressureReading>());
             } 
         }        
     }
