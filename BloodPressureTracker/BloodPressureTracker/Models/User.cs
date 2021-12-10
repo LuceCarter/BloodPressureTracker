@@ -15,11 +15,9 @@ namespace BloodPressureTracker.Models
         [Required]
         public string Partition { get; set; }
 
-        [MapTo("readings")]
-        public IList<BloodPressureReading> Readings {get;} 
-
         [MapTo("name")]
         [Required]
-        public string Name { get; set; }
+        public string Name { get; set; }      
+      
     }
 }

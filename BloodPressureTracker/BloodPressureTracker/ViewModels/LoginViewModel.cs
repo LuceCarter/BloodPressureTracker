@@ -37,14 +37,15 @@ namespace BloodPressureTracker.ViewModels
 
         public bool CheckIsLoggedIn()
         {
-           var user = App.RealmApp.CurrentUser;
-
-            if (user.State == UserState.LoggedIn)
-                return true;
-            else
+            if(App.RealmApp.CurrentUser != null)
             {
-                return false;
+                var user = App.RealmApp.CurrentUser;
+
+                if (user.State == UserState.LoggedIn)
+                    return true;
             }
+
+            return false;
         }
 
         private async Task Login()
