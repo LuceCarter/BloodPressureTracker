@@ -6,8 +6,8 @@
     x:Class="BloodPressureTracker.Views.TrendsPage"
     Title="{Binding Title}">
 
-    <ContentPage.BindingContext>
-        <vm:TrendsViewModel />
-    </ContentPage.BindingContext>
+   
+
+    <WebView x:Name="chartView" WidthRequest="1500" HeightRequest="1500" />
    
 </ContentPage>

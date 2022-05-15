@@ -10,7 +10,9 @@
         <vm:LogReadingViewModel />
     </ContentPage.BindingContext>
 
-    <StackLayout Padding="15">
+    <StackLayout Padding="15"
+                 VerticalOptions="CenterAndExpand"
+                 HorizontalOptions="CenterAndExpand">
         <Label Text="BP" />
         <StackLayout Orientation="Horizontal">
             <Entry Text="{Binding SystolicEntry}"

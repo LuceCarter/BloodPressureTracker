@@ -23,7 +23,7 @@ namespace BloodPressureTracker
 
             if (isLoggedIn)
             {
-                AppShell.Current.GoToAsync("Main");
+                AppShell.Current.GoToAsync("/Main");
             }           
         }
     }

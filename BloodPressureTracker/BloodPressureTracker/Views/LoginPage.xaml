@@ -1,4 +1,31 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<controls:GradientContentPage NavigationPage.HasNavigationBar="false" NavigationPage.BackButtonTitle="" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:BloodPressureTracker" x:Class="BloodPressureTracker.Views.LoginPage" Shell.NavBarIsVisible="False" xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+    ios:Page.UseSafeArea="true" xmlns:controls="clr-namespace:BloodPressureTracker.Controls">
+    <Grid x:Name="MainGrid">
+        <Image Source="background" Aspect="Fill"/>
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout VerticalOptions="FillAndExpand" Padding="6" Spacing="0">
+                <StackLayout VerticalOptions="CenterAndExpand">
+                <Image Source="bloodpressure" HorizontalOptions="Center" />
+                <!-- Place new controls here -->
+                <StackLayout x:Name="FormLayout" Spacing="5" VerticalOptions="CenterAndExpand">                    
+                    <StackLayout Spacing="8">
+                        <Label Text="Username/Email" FontSize="12" />
+                        <Entry Text="{Binding EmailEntry}" Keyboard="Plain" />
+                    </StackLayout>
+                    <StackLayout Spacing="8">
+                        <Label Text="Password" FontSize="12" />
+                        <Entry Text="{Binding PasswordEntry}" IsPassword="True"/>
+                    </StackLayout>                    
+                </StackLayout>
+                    </StackLayout>
+                <Button x:Name="LoginButton" Command="{Binding LoginCommand}" VerticalOptions="EndAndExpand" Text="Login" />
+                <Button x:Name="CreateAccountButton" Command="{Binding CreateAccountCommand}" VerticalOptions="EndAndExpand" Text="Create Account" BackgroundColor="{StaticResource PrimaryColorOrange}" TextColor="{StaticResource SecondaryColorBlue}"/>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</controls:GradientContentPage>
+<!--<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -11,10 +38,11 @@
         <vm:LoginViewModel />
     </ContentPage.BindingContext>
 
+
     <StackLayout Padding="{StaticResource defaultSpacing}">
         <Entry Placeholder="Email" Text="{Binding EmailEntry}" IsTextPredictionEnabled="False" Keyboard="Plain" />
         <Entry Placeholder="Password" IsPassword="True" Text="{Binding PasswordEntry}" IsTextPredictionEnabled="False" Keyboard="Plain" />
         <Button Text="Log In" Command="{Binding LoginCommand}"/>
         <Button Text="Create New Account" Command="{Binding CreateAccountCommand}" BackgroundColor="{StaticResource PrimaryColorOrange}" TextColor="{StaticResource SecondaryColorBlue}"/>
     </StackLayout>
-</ContentPage>
+</ContentPage>-->
